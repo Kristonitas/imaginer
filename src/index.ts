@@ -31,6 +31,9 @@ app.get("/:width/:height", (req, res) => {
 		scale: isNaN(scale) ? undefined : scale,
 		background
 	});
+	res.contentType("jpeg");
+	res.status(200);
+	res.header("Access-Control-Allow-Origin", "*");
 	imageStream.pipe(res);
 });
 

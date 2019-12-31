@@ -12,7 +12,7 @@ If the scaling behaves poorly, need to compile from source with `npm install can
 
 ## Usage
 
-Start server with `npm run dev`. Open http://localhost:3000/100/100?scale=2&background=rgb(150,200,255)
+Start server with `npm run dev`. Open http://localhost:4321/100/100?scale=2&background=rgb(150,200,255)
 
 ## Scripts
 
