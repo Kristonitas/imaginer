@@ -23,12 +23,13 @@ app.get("/:width/:height", (req, res) => {
 		return;
 	}
 
-	const { scale: scaleS } = req.query;
+	const { scale: scaleS, background } = req.query;
 	const scale = parseInt(scaleS, 10);
 
 	const imageStream = render(width, height, {
 		dev,
-		scale: isNaN(scale) ? undefined : scale
+		scale: isNaN(scale) ? undefined : scale,
+		background
 	});
 	imageStream.pipe(res);
 });
