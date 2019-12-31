@@ -34,6 +34,6 @@ app.get("/:width/:height", (req, res) => {
 	imageStream.pipe(res);
 });
 
-createServer(app).listen(3000, () => {
-	console.log("Example app listening on port 3000!");
+createServer(app).listen(4321, () => {
+	console.log("Listening on port 4321!");
 });
