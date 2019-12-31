@@ -1,5 +1,10 @@
 This project is used to generate images to be used in mocks
 
+## Live example
+
+https://imaginer.ksonit.lt/100/100?scale=2&background=rgb(150,200,255)
+![](<https://imaginer.ksonit.lt/100/100?scale=2&background=rgb(150,200,255)>)
+
 ## Instalation
 
 `npm install`
