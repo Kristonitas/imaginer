@@ -5,6 +5,10 @@ This project is used to generate images to be used in mocks
 `npm install`
 If the scaling behaves poorly, need to compile from source with `npm install canvas --build-from-source`: https://github.com/Automattic/node-canvas/issues/1506
 
+## Usage
+
+Start server with `npm run dev`. Open http://localhost:3000/100/100?scale=2&background=rgb(150,200,255)
+
 ## Scripts
 
 -   `tsc` Compiles the app in preparation of production launch
