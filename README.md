@@ -1,5 +1,10 @@
 This project is used to generate images to be used in mocks
 
+## Instalation
+
+`npm install`
+If the scaling behaves poorly, need to compile from source with `npm install canvas --build-from-source`: https://github.com/Automattic/node-canvas/issues/1506
+
 ## Scripts
 
 -   `tsc` Compiles the app in preparation of production launch
