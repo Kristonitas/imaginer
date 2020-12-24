@@ -5,8 +5,11 @@ import { render } from "./renderer";
 // Can reuse server instance with createServer
 // https://stackoverflow.com/questions/17696801/express-js-app-listen-vs-server-listen
 
+const { PORT = 4321, NODE_ENV } = process.env;
 const app = express();
-const dev = process.env.NODE_ENV !== "production";
+const dev = NODE_ENV !== "production";
+
+console.log(`Starting app in ${dev ? "dev" : "prod"}`);
 
 app.get("/", (req, res) => {
 	res.send("Hello World!");
@@ -37,6 +40,6 @@ app.get("/:width/:height", (req, res) => {
 	imageStream.pipe(res);
 });
 
-createServer(app).listen(4321, () => {
-	console.log("Listening on port 4321!");
+createServer(app).listen(PORT, () => {
+	console.log(`Listening on port ${PORT}!`);
 });
