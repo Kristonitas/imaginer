@@ -26,8 +26,8 @@ app.get("/:width/:height", (req, res) => {
 		return;
 	}
 
-	const { scale: scaleS, background } = req.query;
-	const scale = parseInt(scaleS, 10);
+	const { scale: scaleS = "1", background } = req.query as { scale?: string, background?: string };
+	const scale = parseFloat(scaleS);
 
 	const imageStream = render(width, height, {
 		dev,
